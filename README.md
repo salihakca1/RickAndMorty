@@ -13,7 +13,7 @@ Kullanılan Teknolojiler & Yapılar<br/>
 •	Coroutines -- Bir eşzamanlı tasarım deseni kitaplığı<br/><br/>
 		API hakkında<br/>
 API belgelerinin bağlantısı: https://rickandmortyapi.com/<br/><br/>
-		Ekranlar<br/>
+		**Ekranlar**<br/>
 1-	Splash Screen (Karşılama Ekranı) -> Uygulamaya girdiğinizde sizi ilk Splash Screen karşılar. Uygulamaya ilk açışınız ise uygulamayı tanıtıcı bir fotoğraf ve altında Welcome! yazısını görürsünüz. Eğer daha önce uygulamayı açtıysanız bu sefer Hello! yazacaktır.<br/>
 private object DataStoreKeys{<br/>
             val isFirstRun = booleanPreferencesKey(Constants.FIRST_RUN_KEY)<br/>
@@ -28,9 +28,9 @@ private object DataStoreKeys{<br/>
             return p[DataStoreKeys.isFirstRun]?:false<br/>
                 }<br/><br/>
 
-2-	Main Screen (Ana Ekran)-> Bu ekranda yatay kayan ve dikey kayan listeleme mevcuttur. Yatay kayan listeleme de Rick And Morty televizyon dizisinde geçen konumlar listelenmiştir. İlk başta 20 tane konum görüyoruz kaydırdıkça sayfa sayfa konumlar çekiliyor, her bir sayfa 20 konum getirmektedir ve ekranda kullanıcıya gösteriliyor. Dikey kayan listeme de Rick And Morty dizisinde bulunan seçili konumdaki karakterler listelenmiştir.<br/> <br/>
+**2-	Main Screen (Ana Ekran)->** Bu ekranda yatay kayan ve dikey kayan listeleme mevcuttur. Yatay kayan listeleme de Rick And Morty televizyon dizisinde geçen konumlar listelenmiştir. İlk başta 20 tane konum görüyoruz kaydırdıkça sayfa sayfa konumlar çekiliyor, her bir sayfa 20 konum getirmektedir ve ekranda kullanıcıya gösteriliyor. Dikey kayan listeme de Rick And Morty dizisinde bulunan seçili konumdaki karakterler listelenmiştir.<br/> <br/>
 
--- Paging ile verileri sayfa sayfa çekme<br/>
+- **Paging ile verileri sayfa sayfa çekme**<br/>
 class PagingRepository @Inject constructor (private val rickAndMortyDaoRepository: RickAndMortyDaoRepository): PagingSource<Int, Results>() {<br/>
 <br/>
 override fun getRefreshKey(state: PagingState<Int, Results>): Int? {<br/>
