@@ -1,5 +1,5 @@
 # Rick And Morty 
-Kullanıcının Rick And Morty karakterlerini ve konumlarını seçebileceği ve seçilen karakterin detaylarını görebileceği ekranlar bulunan Kotlin dili hazırlanmış Android mobil uygulama.<br/><br/>
+	Kullanıcının Rick And Morty karakterlerini ve konumlarını seçebileceği ve seçilen karakterin detaylarını görebileceği ekranlar bulunan Kotlin dili hazırlanmış Android mobil uygulama.<br/><br/>
 Kullanılan Teknolojiler & Yapılar<br/>
 •	Jetpack Compose -- Android için bildirime dayalı UI kiti.<br/>
 •	MVVM Mimarisi – (Model – View- ViewModel)<br/>
@@ -11,9 +11,9 @@ Kullanılan Teknolojiler & Yapılar<br/>
 •	LiveData – Yaşam döngüsü<br/>
 •	Retrofit -- HTTP istemcisi<br/>
 •	Coroutines -- Bir eşzamanlı tasarım deseni kitaplığı<br/><br/>
-API hakkında<br/>
+		API hakkında<br/>
 API belgelerinin bağlantısı: https://rickandmortyapi.com/<br/><br/>
-Ekranlar<br/>
+		Ekranlar<br/>
 1-	Splash Screen (Karşılama Ekranı) -> Uygulamaya girdiğinizde sizi ilk Splash Screen karşılar. Uygulamaya ilk açışınız ise uygulamayı tanıtıcı bir fotoğraf ve altında Welcome! yazısını görürsünüz. Eğer daha önce uygulamayı açtıysanız bu sefer Hello! yazacaktır.<br/>
 private object DataStoreKeys{<br/>
             val isFirstRun = booleanPreferencesKey(Constants.FIRST_RUN_KEY)<br/>
