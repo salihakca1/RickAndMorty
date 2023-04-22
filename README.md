@@ -1,5 +1,5 @@
 # Rick And Morty 
-Kullanıcının Rick And Morty karakterlerini ve konumlarını seçebileceği ve seçilen karakterin detaylarını görebileceği ekranlar bulunan Kotlin dili hazırlanmış Android mobil uygulama.
+Kullanıcının Rick And Morty karakterlerini ve konumlarını seçebileceği ve seçilen karakterin detaylarını görebileceği ekranlar bulunan Kotlin dili hazırlanmış Android mobil uygulama.<br/><br/>
 Kullanılan Teknolojiler & Yapılar<br/>
 •	Jetpack Compose -- Android için bildirime dayalı UI kiti.<br/>
 •	MVVM Mimarisi – (Model – View- ViewModel)<br/>
@@ -10,9 +10,9 @@ Kullanılan Teknolojiler & Yapılar<br/>
 •	Navigation --Ekranlar arasında gezinme<br/>
 •	LiveData – Yaşam döngüsü<br/>
 •	Retrofit -- HTTP istemcisi<br/>
-•	Coroutines -- Bir eşzamanlı tasarım deseni kitaplığı<br/>
+•	Coroutines -- Bir eşzamanlı tasarım deseni kitaplığı<br/><br/>
 API hakkında<br/>
-API belgelerinin bağlantısı: https://rickandmortyapi.com/<br/>
+API belgelerinin bağlantısı: https://rickandmortyapi.com/<br/><br/>
 Ekranlar<br/>
 1-	Splash Screen (Karşılama Ekranı) -> Uygulamaya girdiğinizde sizi ilk Splash Screen karşılar. Uygulamaya ilk açışınız ise uygulamayı tanıtıcı bir fotoğraf ve altında Welcome! yazısını görürsünüz. Eğer daha önce uygulamayı açtıysanız bu sefer Hello! yazacaktır.<br/>
 private object DataStoreKeys{<br/>
@@ -21,14 +21,14 @@ private object DataStoreKeys{<br/>
         suspend fun saveRunInfo(isFirst: Boolean){<br/>
             dataStore.edit {<br/>
                 it[DataStoreKeys.isFirstRun] = isFirst<br/>
-            }<br/>
-        }<br/>
+                }<br/>
+               }<br/>
          suspend fun readRunInfo(): Boolean{<br/>
             val p = dataStore.data.first()<br/>
             return p[DataStoreKeys.isFirstRun]?:false<br/>
-        }<br/>
+                }<br/><br/>
 
-2-	Main Screen (Ana Ekran)-> Bu ekranda yatay kayan ve dikey kayan listeleme mevcuttur. Yatay kayan listeleme de Rick And Morty televizyon dizisinde geçen konumlar listelenmiştir. İlk başta 20 tane konum görüyoruz kaydırdıkça sayfa sayfa konumlar çekiliyor, her bir sayfa 20 konum getirmektedir ve ekranda kullanıcıya gösteriliyor. Dikey kayan listeme de Rick And Morty dizisinde bulunan seçili konumdaki karakterler listelenmiştir.<br/> 
+2-	Main Screen (Ana Ekran)-> Bu ekranda yatay kayan ve dikey kayan listeleme mevcuttur. Yatay kayan listeleme de Rick And Morty televizyon dizisinde geçen konumlar listelenmiştir. İlk başta 20 tane konum görüyoruz kaydırdıkça sayfa sayfa konumlar çekiliyor, her bir sayfa 20 konum getirmektedir ve ekranda kullanıcıya gösteriliyor. Dikey kayan listeme de Rick And Morty dizisinde bulunan seçili konumdaki karakterler listelenmiştir.<br/> <br/>
 
  Paging ile verileri sayfa sayfa çekme<br/>
 class PagingRepository @Inject constructor (private val rickAndMortyDaoRepository: RickAndMortyDaoRepository): PagingSource<Int, Results>() {<br/>
@@ -62,8 +62,8 @@ val locations= Pager(PagingConfig(pageSize = 20)) {<br/>
     PagingRepository(repo)<br/>
 }.flow.cachedIn(viewModelScope)<br/>
 
-<br/>
-3-	Detail Screen (Detay Ekranı)-> Bu ekranda; Main Screen ekranında seçilen karakterin detayları görünmektedir. Detaylar bu ekrana Main Screen’den Parcelable yapısını kullanarak getirilmektedir. 
+<br/><br/>
+3-	Detail Screen (Detay Ekranı)-> Bu ekranda; Main Screen ekranında seçilen karakterin detayları görünmektedir. Detaylar bu ekrana Main Screen’den Parcelable yapısını kullanarak getirilmektedir. <br/><br/>
 val character =  navController.previousBackStackEntry?.savedStateHandle?.get<Characters>("character")<br/>
 character?.let {<br/>
     CharacterDetailScreen(navController = navController, character = character)<br/>
