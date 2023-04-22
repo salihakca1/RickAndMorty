@@ -21,7 +21,7 @@ private object DataStoreKeys{<br/>
         suspend fun saveRunInfo(isFirst: Boolean){<br/>
             dataStore.edit {<br/>
                 it[DataStoreKeys.isFirstRun] = isFirst<br/>
-                }<br/>
+                }
                }<br/>
          suspend fun readRunInfo(): Boolean{<br/>
             val p = dataStore.data.first()<br/>
@@ -36,7 +36,7 @@ class PagingRepository @Inject constructor (private val rickAndMortyDaoRepositor
 override fun getRefreshKey(state: PagingState<Int, Results>): Int? {<br/>
     return state.anchorPosition?.let { anchorPosition -><br/>
         val anchorPage = state.closestPageToPosition(anchorPosition)<br/>
-        anchorPage?.prevKey?.plus(1) ?: anchorPage?.nextKey?.minus(1)<br/>
+        anchorPage?.prevKey?.plus(1) ?: anchorPage?.nextKey?.minus(1)
     }
 }<br/>
 <br/>
