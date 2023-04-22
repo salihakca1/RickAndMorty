@@ -5,7 +5,7 @@ Kullanılan Teknolojiler & Yapılar<br/>
 •	MVVM Mimarisi – (Model – View- ViewModel)<br/>
 •	Paging -- Sayfalandırma<br/>
 •	Dagger Hilt -- Dependency Injection çerçevesi<br/>
-•	DataStore – Veri depolama<br/><br/>
+•	DataStore – Veri depolama<br/>
 •	Glide – Resimleri yükleme<br/>
 •	Navigation --Ekranlar arasında gezinme<br/>
 •	LiveData – Yaşam döngüsü<br/>
