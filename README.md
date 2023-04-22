@@ -1,16 +1,16 @@
 # Rick And Morty 
 *Kullanıcının Rick And Morty karakterlerini ve konumlarını seçebileceği ve seçilen karakterin detaylarını görebileceği ekranlar bulunan Kotlin dili hazırlanmış Android mobil uygulama.<br/><br/>*
 **Kullanılan Teknolojiler & Yapılar**<br/>
-•	*Jetpack Compose* -- Android için bildirime dayalı UI kiti.<br/>
+•	*Jetpack Compose* - Android için bildirime dayalı UI kiti.<br/>
 •	*MVVM Mimarisi* – (Model – View- ViewModel)<br/>
-•	*Paging* -- Sayfalandırma<br/>
-•	*Dagger Hilt* -- Dependency Injection çerçevesi<br/>
+•	*Paging* - Sayfalandırma<br/>
+•	*Dagger Hilt* - Dependency Injection çerçevesi<br/>
 •	*DataStore* – Veri depolama<br/>
 •	*Glide* – Resimleri yükleme<br/>
-•	*Navigation* --Ekranlar arasında gezinme<br/>
+•	*Navigation* -Ekranlar arasında gezinme<br/>
 •	*LiveData* – Yaşam döngüsü<br/>
-•	*Retrofit* -- HTTP istemcisi<br/>
-•	*Coroutines* -- Bir eşzamanlı tasarım deseni kitaplığı<br/><br/>
+•	*Retrofit* - HTTP istemcisi<br/>
+•	*Coroutines* - Bir eşzamanlı tasarım deseni kitaplığı<br/><br/>
 		**API hakkında**<br/>
 API belgelerinin bağlantısı: https://rickandmortyapi.com/<br/><br/>
 		**Ekranlar**<br/>
