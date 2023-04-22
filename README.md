@@ -1,6 +1,6 @@
 # Rick And Morty 
 Kullanıcının Rick And Morty karakterlerini ve konumlarını seçebileceği ve seçilen karakterin detaylarını görebileceği ekranlar bulunan Kotlin dili hazırlanmış Android mobil uygulama.<br/><br/>
-Kullanılan Teknolojiler & Yapılar<br/>
+**Kullanılan Teknolojiler & Yapılar**<br/>
 •	Jetpack Compose -- Android için bildirime dayalı UI kiti.<br/>
 •	MVVM Mimarisi – (Model – View- ViewModel)<br/>
 •	Paging -- Sayfalandırma<br/>
@@ -61,9 +61,8 @@ override suspend fun load(params: LoadParams<Int>): LoadResult<Int,Results> {<br
 val locations= Pager(PagingConfig(pageSize = 20)) {<br/>
     PagingRepository(repo)<br/>
 }.flow.cachedIn(viewModelScope)<br/>
-
-<br/>
-3-	**Detail Screen (Detay Ekranı)->** Bu ekranda; Main Screen ekranında seçilen karakterin detayları görünmektedir. Detaylar bu ekrana Main Screen’den Parcelable yapısını kullanarak getirilmektedir. <br/><br/>
+	<br/>
+3- Detail Screen (Detay Ekranı)-> Bu ekranda; Main Screen ekranında seçilen karakterin detayları görünmektedir. Detaylar bu ekrana Main Screen’den Parcelable yapısını kullanarak getirilmektedir. <br/><br/>
 val character =  navController.previousBackStackEntry?.savedStateHandle?.get<Characters>("character")<br/>
 character?.let {<br/>
     CharacterDetailScreen(navController = navController, character = character)<br/>
