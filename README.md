@@ -37,7 +37,7 @@ override fun getRefreshKey(state: PagingState<Int, Results>): Int? {<br/>
     return state.anchorPosition?.let { anchorPosition -><br/>
         val anchorPage = state.closestPageToPosition(anchorPosition)<br/>
         anchorPage?.prevKey?.plus(1) ?: anchorPage?.nextKey?.minus(1)<br/>
-    }<br/>
+    }
 }<br/>
 <br/>
 @SuppressLint("SuspiciousIndentation")<br/>
@@ -54,14 +54,14 @@ override suspend fun load(params: LoadParams<Int>): LoadResult<Int,Results> {<br
         )<br/>
     } catch (e: Exception) {<br/>
         LoadResult.Error(e)<br/>
-    }<br/>
+    }
   }
 	}<br/>
 val locations= Pager(PagingConfig(pageSize = 20)) {<br/>
     PagingRepository(repo)<br/>
 }.flow.cachedIn(viewModelScope)<br/>
 	<br/>
-3- Detail Screen (Detay Ekranı)-><br/> Bu ekranda; Main Screen ekranında seçilen karakterin detayları görünmektedir. Detaylar bu ekrana Main Screen’den Parcelable yapısını kullanarak getirilmektedir. <br/><br/>
+**3- Detail Screen (Detay Ekranı)->**<br/> Bu ekranda; Main Screen ekranında seçilen karakterin detayları görünmektedir. Detaylar bu ekrana Main Screen’den Parcelable yapısını kullanarak getirilmektedir. <br/><br/>
 val character =  navController.previousBackStackEntry?.savedStateHandle?.get<Characters>("character")<br/>
 character?.let {<br/>
     CharacterDetailScreen(navController = navController, character = character)<br/>
