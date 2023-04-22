@@ -1,5 +1,5 @@
 # Rick And Morty 
-	Kullanıcının Rick And Morty karakterlerini ve konumlarını seçebileceği ve seçilen karakterin detaylarını görebileceği ekranlar bulunan Kotlin dili hazırlanmış Android mobil uygulama.<br/><br/>
+Kullanıcının Rick And Morty karakterlerini ve konumlarını seçebileceği ve seçilen karakterin detaylarını görebileceği ekranlar bulunan Kotlin dili hazırlanmış Android mobil uygulama.<br/><br/>
 Kullanılan Teknolojiler & Yapılar<br/>
 •	Jetpack Compose -- Android için bildirime dayalı UI kiti.<br/>
 •	MVVM Mimarisi – (Model – View- ViewModel)<br/>
