@@ -30,7 +30,7 @@ private object DataStoreKeys*{<br/>
 
 **2-	Main Screen (Ana Ekran)->**<br/> *Bu ekranda yatay kayan ve dikey kayan listeleme mevcuttur. Yatay kayan listeleme de Rick And Morty televizyon dizisinde geçen konumlar listelenmiştir. İlk başta 20 tane konum görüyoruz kaydırdıkça sayfa sayfa konumlar çekiliyor, her bir sayfa 20 konum getirmektedir ve ekranda kullanıcıya gösteriliyor. Dikey kayan listeme de Rick And Morty dizisinde bulunan seçili konumdaki karakterler listelenmiştir.*<br/> <br/>
 
-- **Paging ile verileri sayfa sayfa çekme**<br/>
+ **Paging ile verileri sayfa sayfa çekme**<br/>
 class PagingRepository @Inject constructor (private val rickAndMortyDaoRepository: RickAndMortyDaoRepository): PagingSource<Int, Results>() {<br/>
 <br/>
 override fun getRefreshKey(state: PagingState<Int, Results>): Int? {<br/>
