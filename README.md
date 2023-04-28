@@ -1,5 +1,6 @@
 # Rick And Morty 
-*Kullanıcının Rick And Morty karakterlerini ve konumlarını seçebileceği ve seçilen karakterin detaylarını görebileceği ekranlar bulunan Kotlin dili hazırlanmış Android mobil uygulama.*<br/><br/>
+*Kullanıcının Rick And Morty karakterlerini ve konumlarını seçebileceği ve seçilen karakterin detaylarını görebileceği ekranlar bulunan Kotlin dili hazırlanmış Android mobil uygulama.*<br/>
+<br/>
 https://www.youtube.com/watch?v=EyAlHDIAMOo 
 <br/>
 <br/>
@@ -31,7 +32,7 @@ private object DataStoreKeys*{<br/>
             return p[DataStoreKeys.isFirstRun]?:false<br/>
                 }<br/><br/>
 
-**2-	Main Screen (Ana Ekran)->**<br/> *Bu ekranda yatay kayan ve dikey kayan listeleme mevcuttur. Yatay kayan listeleme de Rick And Morty televizyon dizisinde geçen konumlar listelenmiştir. İlk başta 20 tane konum görüyoruz kaydırdıkça sayfa sayfa konumlar çekiliyor, her bir sayfa 20 konum getirmektedir ve ekranda kullanıcıya gösteriliyor. Dikey kayan listeme de Rick And Morty dizisinde bulunan seçili konumdaki karakterler listelenmiştir.*<br/> <br/>
+**2-	Main Screen (Ana Ekran)->**<br/> *Bu ekranda yatay kayan ve dikey kayan listeleme mevcuttur. Yatay kayan listeleme de Rick And Morty televizyon dizisinde geçen konumlar listelenmiştir. İlk başta 20 tane konum görüyoruz kaydırdıkça sayfa sayfa konumlar çekiliyor, her bir sayfa 20 konum getirmektedir ve ekranda kullanıcıya gösteriliyor. Dikey kayan listeme de Rick And Morty dizisinde bulunan seçili konumdaki karakterler listelenmiştir. Dikey olan karakter listesinde female için çerçeve kırmızı, male için mavi, unknown için siyah renktedir.*<br/> <br/>
 
 - **Paging ile verileri sayfa sayfa çekme**<br/>
 class PagingRepository @Inject constructor (private val rickAndMortyDaoRepository: RickAndMortyDaoRepository): PagingSource<Int, Results>() {<br/>
